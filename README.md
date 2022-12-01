@@ -59,3 +59,31 @@
 
 - **3.4.5 Boolean attribute values**
   - cách pass giá trị boolean vào các attribute khi tạo element
+
+## Chapter 4: Making React interactive with states
+
+- **4.1 What are React component states?**
+  - giới thiệu về state: được sử dụng để hiển thị dynamic information trong một view
+
+- **4.2 Working with states**
+  - [example](./src/ch4/clock): sử dụng state để cập nhật giá trị đồng hồ mỗi giây
+
+- **4.2.1 Accessing states**
+  - cách truy cập giá trị của một state
+
+- **4.2.2 Setting the initial state**
+  - cách khởi tạo giá trị cho state: bên trong constructor của một component
+
+- **4.2.3 Updating states**
+  - cách cập nhật giá trị cho state: sử dụng `setState` method của `React.Component` class
+
+- **4.3 States and properties**
+  - so sánh sự giống và khác nhau giữa property và state trong React
+
+- **4.4 Stateless components**
+  - là các component chỉ sử dụng property để render view, nên sử dụng function style thay vì class style để define chúng
+
+- **4.5 Stateful vs. stateless components**
+  - example: lời khuyên khi design các component
+    - nên viết stateless component nhiều nhất có thể
+    - đặt stateful component lên trên cùng hierarchy để xử lý logic
