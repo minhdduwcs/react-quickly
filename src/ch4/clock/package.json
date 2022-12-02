@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "babel jsx -o script.js"
+    "build": "babel jsx -d js"
   },
   "babel": {
     "presets": [

@@ -3,9 +3,7 @@
   npm install
   ```
 
-- build script file
-  ```
+- build JSX files to JS files
+  ```shell
   npm run build
   ```
-
-- open `index.html` file in browser

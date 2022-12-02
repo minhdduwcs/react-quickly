@@ -1,4 +1,4 @@
-const AnalogDisplay = function(props) {
+const AnalogDisplay = function (props) {
   const date = new Date(props.time);
 
   const dialStyle = {
@@ -19,7 +19,7 @@ const AnalogDisplay = function(props) {
     border: '1px solid red',
     width: '40%',
     height: 1,
-    transform: 'rotate(' + ((date.getSeconds() / 60) * 360 - 90).toString() + 'deg)',
+    transform: 'rotate(' + (date.getSeconds() / 60 * 360 - 90).toString() + 'deg)',
     transformOrigin: '0% 0%',
     backgroundColor: 'red'
   };
@@ -31,7 +31,7 @@ const AnalogDisplay = function(props) {
     border: '1px solid grey',
     width: '40%',
     height: 3,
-    transform: 'rotate(' + ((date.getMinutes() / 60) * 360 - 90).toString() + 'deg)',
+    transform: 'rotate(' + (date.getMinutes() / 60 * 360 - 90).toString() + 'deg)',
     transformOrigin: '0% 0%',
     backgroundColor: 'grey'
   };
@@ -43,18 +43,20 @@ const AnalogDisplay = function(props) {
     border: '1px solid grey',
     width: '20%',
     height: 7,
-    transform: 'rotate(' + ((date.getHours() / 12) * 360 - 90).toString() + 'deg)',
+    transform: 'rotate(' + (date.getHours() / 12 * 360 - 90).toString() + 'deg)',
     transformOrigin: '0% 0%',
     backgroundColor: 'grey'
   };
 
-  return (
-    <div>
-      <div style={dialStyle}>
-        <div style={secondHandStyle} />
-        <div style={minuteHandStyle} />
-        <div style={hourHandStyle} />
-      </div>
-    </div>
+  return React.createElement(
+    'div',
+    null,
+    React.createElement(
+      'div',
+      { style: dialStyle },
+      React.createElement('div', { style: secondHandStyle }),
+      React.createElement('div', { style: minuteHandStyle }),
+      React.createElement('div', { style: hourHandStyle })
+    )
   );
-}
+};

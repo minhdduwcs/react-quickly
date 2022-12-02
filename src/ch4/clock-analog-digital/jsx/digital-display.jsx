@@ -1,3 +1,3 @@
-const DigitalDisplay = props => {
-  return <div>{props.time}</div>
-};
+const DigitalDisplay = function(props) {
+  return <div>{props.time}</div>;
+}

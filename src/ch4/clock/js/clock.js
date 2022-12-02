@@ -3,7 +3,7 @@ class Clock extends React.Component {
     super(props);
     this.launchClock();
     this.state = {
-      currentTime: (new Date()).toLocaleString()
+      currentTime: new Date().toLocaleString()
     };
   }
 
@@ -11,13 +11,17 @@ class Clock extends React.Component {
     setInterval(() => {
       console.log('Updating time...');
       this.setState({
-        currentTime: (new Date()).toLocaleString()
-      })
+        currentTime: new Date().toLocaleString()
+      });
     }, 1000);
   }
 
   render() {
     console.log('Rendering Clock...');
-    return <div>{this.state.currentTime}</div>;
+    return React.createElement(
+      'div',
+      null,
+      this.state.currentTime
+    );
   }
 }
