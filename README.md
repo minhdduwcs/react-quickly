@@ -87,3 +87,49 @@
   - [clock-analog-digital](./src/ch4/clock-analog-digital): lời khuyên khi design các component
     - nên viết stateless component nhiều nhất có thể
     - đặt stateful component lên trên cùng hierarchy để xử lý logic
+
+## Chapter 5: React component lifecycle events
+
+- **5.1 A bird’s-eye view of React component lifecycle events**
+  - giới thiệu về lifecycle event của React component
+
+- **5.2 Categories of events**
+  - chia các event vào 3 category và mô tả chi tiết từng event của mỗi category
+
+- **5.3 Implementing an event**
+  - cách define lifecycle event trong một component
+  - [did-mount](src/ch5/did-mount): kiểm tra DOM node trong 2 event `componentWillMount` và `componentDidMount`
+
+- **5.4 Executing all events together**
+  - [logger](src/ch5/logger): sử dụng tất cả các lifecycle event trong `Logger` component
+
+- **5.5 Mounting events**
+  - giới thiệu các event của mounting category
+
+- **5.5.1 componentWillMount()**
+  - chi tiết về event componentWillMount
+
+- **5.5.2 componentDidMount()**
+  - chi tiết về event componentDidMount
+  - [users](src/ch5/users): hiển thị list user bằng cách fetch data bên trong componentDidMount event
+
+- **5.6 Updating events**
+  - giới thiệu chung về các updating event và thứ tự thực hiện của chúng
+
+- **5.6.1 componentWillReceiveProps(newProps)**
+  - chi tiết về event componentWillReceiveProps
+
+- **5.6.2 shouldComponentUpdate()**
+  - chi tiết về event shouldComponentUpdate
+
+- **5.6.3 componentWillUpdate()**
+  - chi tiết về event componentWillUpdate
+
+- **5.6.4 componentDidUpdate()**
+  - chi tiết về event componentDidUpdate
+
+- **5.7 Unmounting event**
+  - giới thiệu các event của unmounting category
+
+- **5.7.1 componentWillUnmount()**
+  - chi tiết về event componentWillUnmount
