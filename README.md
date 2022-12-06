@@ -133,3 +133,32 @@
 
 - **5.7.1 componentWillUnmount()**
   - chi tiết về event componentWillUnmount
+
+## Chapter 6: Handling events in React
+
+- **6.1 Working with DOM events in React**
+  - [button](src/ch6/button): define DOM event cho React element: gồm các cách bind con trỏ this
+  - danh sách các DOM event được hỗ trợ bởi React
+
+- **6.1.1 Capture and bubbling phases**
+  - nguyên lý hoạt động của capture và bubbling phase khi xử lý cùng một event cho cả element và các ancestor của nó
+  - [mouse-capture](src/ch6/mouse-capture): sử dụng cả capture và bubbling phase của cùng một mouseover event
+
+- **6.1.2 React events under the hood**
+  - nguyên lý hoạt động của React event: React sẽ attach các event handler vào document mà không phải là các DOM node
+
+- **6.1.3 Working with the React SyntheticEvent event object**
+  - để tránh cross-browser issue, React sử dụng một wrapper cho các native event của hầu hết browser là synthetic event
+  - [mouse-event](src/ch6/mouse-event): chứng minh event wrapper là nullified, sau khi event kết thúc sẽ biến mất
+
+- **6.1.4 Using events and state**
+  - [onclick](src/ch6/onclick): update state trong event handler cho phép view phản hồi lại với các user action
+
+- **6.1.5 Passing event handlers as properties**
+  - [onclick-props](src/ch6/onclick-props): truyền event handler từ parent component đến child component thông qua `props`
+
+- **6.1.6 Exchanging data between components**
+  - [onclick-parent](src/ch6/onclick-parent): trao đổi data giữa các child component thông qua state của parent component
+
+- **6.2 Responding to DOM events not supported by React**
+  - cách sử dụng các event không được hỗ trợ bởi React: add và remove nó trong các lifecycle event của component
