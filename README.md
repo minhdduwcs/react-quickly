@@ -162,3 +162,40 @@
 
 - **6.2 Responding to DOM events not supported by React**
   - cách sử dụng các event không được hỗ trợ bởi React: add và remove nó trong các lifecycle event của component
+
+## Chapter 7: Working with forms in React
+
+- **7.1 The recommended way to work with forms in React**
+  - problem của React: sử dụng declarative style nên cần phải thực hiện dynamic value của các user-input field
+  - sử dụng one-way binding: cập nhật component state để thay đổi view
+
+- **7.1.1 Defining a form and its events in React**
+  - nên sử dụng `<form>` element để wrap các user-input field lại với nhau
+  - mục đích: dễ quản lý hơn thông qua các event của `<form>` element
+
+- **7.1.2 Defining form elements**
+  - [elements](src/ch7/elements): giới thiệu các interactive property của input element
+    - the `<input>` element: sử dụng radio và checkbox trong React
+    - the `<textarea>` element: setting value cho textarea bằng cách sử dụng value property
+    - the `<select>` and `<option>` elements: sử dụng select và options để tạo dropdown và multi-select dropdown trong React
+
+- **7.1.3 Capturing form changes**
+  - [elements](src/ch7/elements): sử dụng các event của `<form>` element để send data đến server
+
+- **7.1.4 Account field example**
+  - [account](src/ch7/account): clean tất cả non-numeric value của account number trước khi set vào state
+
+- **7.2 Alternative ways to work with forms**
+  - sử dụng uncontrolled form element (`value` property không được set bởi `React`) hữu ích khi triển khai các form đơn giản
+
+- **7.2.1 Uncontrolled elements with change capturing**
+  - [uncontrolled](src/ch7/uncontrolled): vẫn sử dụng state cho uncontrolled element để store data (DOM state có thể khác với component state)
+
+- **7.2.2 Uncontrolled elements without capturing changes**
+  - problem của cách tiếp cận này: vì không lưu trữ data trong component state nên phải cần có một phương pháp để truy cập data trong DOM (sử dụng reference)
+
+- **7.2.3 Using references to access values**
+  - [email](src/ch7/email): cách sử dụng reference để truy cập value từ DOM node
+
+- **7.2.4 Default values**
+  - sử dụng defaultValue property để set initial value cho các input field (khi sử dụng uncontrolled form element)
