@@ -199,3 +199,29 @@
 
 - **7.2.4 Default values**
   - sử dụng defaultValue property để set initial value cho các input field (khi sử dụng uncontrolled form element)
+
+## Chapter 8: Scaling React components
+
+- **8.1 Default properties in components**
+  - [default-props](src/ch8/default-props): sử dụng `defaultProps` static attribute để set default value cho các property
+
+- **8.2 React property types and validation**
+  - [prop-types](src/ch8/prop-types): sử dụng `propType` static attribute để define type cho các property
+
+- **8.3 Rendering children**
+  - [children](src/ch8/children): sử dụng `this.props.children` để tạo ra các pass-through component
+
+- **8.4 Creating React higher-order components for code reuse**
+  - [hi-order](src/ch8/hi-order): cách sử dụng higher-order component (HoC) để tạo ra enhanced component bằng cách enhance original component với extra functionality
+
+- **8.4.1 Using displayName: distinguishing child components from their parent**
+  - sử dụng static class attribute `displayName` để thay đổi tên của các component
+
+- **8.4.2 Using the spread operator: passing all of your attributes**
+  - cách sử dụng spread operator trong React
+
+- **8.4.3 Using higher-order components**
+  - cách tạo ra các enhanced component (từ original kết hợp với extra functionality) và sử dụng chúng
+
+- **8.5 Best practices: presentational vs. container components**
+  - phân biệt 2 khái niệm: presentational component và container component
